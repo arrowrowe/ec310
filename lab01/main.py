@@ -9,6 +9,7 @@ class Lab01:
   def __init__(self):
     self.researched = util.source.read('F-F_Research_Data_5_Factors_2x3')
     self.portfolios = util.source.read('25_Portfolios_5x5')
+    self.cacheFiveFactorRegression = [None] * 26
 
   def describe(self):
     return ('%s\n\n%s\n\n%s\n\n%s\n' % (
@@ -40,10 +41,22 @@ class Lab01:
     return self._producecAll(self._threeFactorRegression, index)
 
   def _fiveFactorRegression(self, index):
-    return self._regression('r%d - RF | Mkt-RF, SMB, HML, RMW, CMA', self.researched[['Mkt_RF', 'SMB', 'HML', 'RMW', 'CMA']], index)
+    if self.cacheFiveFactorRegression[index] is None:
+      self.cacheFiveFactorRegression[index] = self._regression('r%d - RF | Mkt-RF, SMB, HML, RMW, CMA', self.researched[['Mkt_RF', 'SMB', 'HML', 'RMW', 'CMA']], index)
+    return self.cacheFiveFactorRegression[index]
 
   def fiveFactorRegression(self, index=None):
     return self._producecAll(self._fiveFactorRegression, index)
+
+  def _testFiveParam(self, index):
+    fit = self._fiveFactorRegression(index).fit()
+    return (
+      fit.f_test('const = 0'),
+      fit.f_test('(RMW = 0), (CMA = 0)')
+    )
+
+  def testFiveParam(self, index=None):
+    return self._producecAll(self._testFiveParam, index)
 
   def hmlRegression(self):
     return util.format.Model(sm.OLS(
@@ -64,7 +77,13 @@ def main():
   # 5
   r = lab.hmlRegression()
   print r
-  print r.fit().f_test('const = 0')
+  print 'const = 0: %s' % r.fit().f_test('const = 0')
+  print
+  # 6
+  print '\n'.join(
+    'Test for r%d\'s five-factor-regression:\n\tconst = 0: %s\n\tRMW = 0, CMA = 0: %s\n' % (i + 1, tests[0], tests[1])
+    for i, tests in enumerate(lab.testFiveParam())
+  )
   # TODO: still more problems left...
 
 if __name__ == '__main__':
