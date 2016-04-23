@@ -84,6 +84,14 @@ def main():
     'Test for r%d\'s five-factor-regression:\n\tconst = 0: %s\n\tRMW = 0, CMA = 0: %s\n' % (i + 1, tests[0], tests[1])
     for i, tests in enumerate(lab.testFiveParam())
   )
+  # TODO: decide upon Problem6*.
+  # 7
+  r = lab.fiveFactorRegression(1) # Choose Sample1
+  print r
+  print util.log.title('its robust-standard-error version')
+  print
+  print r.fit().get_robustcov_results().summary()
+  print
   # TODO: still more problems left...
 
 if __name__ == '__main__':
