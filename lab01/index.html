@@ -1,0 +1,144 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SJTU EC310 | Lab01</title>
+  <meta name="description" content="Slides for Lab01 of SJTU EC310 Econometrics by arrowrowe.">
+  <meta name="author" content="arrowrowe">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/theme/black.min.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/css/zenburn.min.css">
+
+  <!-- Printing and PDF exports -->
+  <!-- NOTE: This does not display properly but print properly. -->
+  <script>
+    var pdfCss = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/print/pdf.min.css';
+    var paperCss = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/css/print/paper.min.css';
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? pdfCss : paperCss;
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    <script>alert('Please use Chrome');</script>
+  <![endif]-->
+
+  <style>
+    blockquote {
+      text-align: left;
+    }
+    blockquote > footer {
+      text-align: right;
+    }
+    blockquote > footer::before {
+      content: '-- ';
+    }
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+      text-transform: none;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>SJTU EC310 Econometrics</h2>
+        <h4>Lab01</h4>
+        <p>
+          <small>by <a href="https://github.com/arrowrowe" target="_blank">arrowrowe</a></small>
+        </p>
+      </section>
+      <section>
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#/data-summary">Data Summary</a></li>
+          <li><a href="#/ols">OLS: with One, Three, Five Factors</a></li>
+          <li><a href="#/five">Into Five-Factor Regression</a></li>
+          <li><a href="#/conclusion">Conclusion</a></li>
+        </ul>
+      </section>
+      <section>
+        <section id="data-summary">
+          <h2>Data Summary</h2>
+          <div class="fragment">
+            <p>25 Columns of Data + 5 Factors, in 620 Months</p>
+          </div>
+        </section>
+      </section>
+      <section>
+        <section id="ols">
+          <h2>OLS</h2>
+          <h4>with One, Three, Five Factors</h4>
+        </section>
+      </section>
+      <section>
+        <section id="five">
+          <h2>Into Five-Factor Regression</h2>
+        </section>
+      </section>
+      <section>
+        <section id="conclusion">
+          <h2>Conclusion</h2>
+        </section>
+      </section>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/head.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/js/reveal.js"></script>
+
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [
+        {
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/lib/js/classList.js',
+          condition: function () {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/marked.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/markdown/markdown.js',
+          condition: function () {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/highlight/highlight.js',
+          async: true,
+          callback: function () {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/zoom-js/zoom.js', async: true},
+        {src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.js', async: true}
+      ]
+    });
+  </script>
+</body>
+</html>
