@@ -1,0 +1,2547 @@
+---------------------------------- Summary -----------------------------------
+
+           Mkt_RF         SMB         HML        RMW         CMA          RF
+count  620.000000  620.000000  620.000000  620.00000  620.000000  620.000000
+mean     0.510613    0.270113    0.353113    0.24900    0.316823    0.405919
+std      4.457309    3.065671    2.861016    2.13645    1.990368    0.258597
+min    -23.240000  -15.260000  -12.610000  -17.60000   -6.760000    0.000000
+25%     -1.982500   -1.422500   -1.170000   -0.86500   -0.925000    0.270000
+50%      0.860000    0.105000    0.340000    0.16000    0.205000    0.400000
+75%      3.460000    2.112500    1.702500    1.31250    1.535000    0.530000
+max     16.100000   19.050000   13.880000   12.24000    8.930000    1.350000
+
+               r1          r2          r3          r4          r5          r6  
+count  620.000000  620.000000  620.000000  620.000000  620.000000  620.000000   
+mean     0.659468    1.209677    1.234726    1.406839    1.530258    0.893613   
+std      7.967762    6.874563    5.993093    5.655631    6.065147    7.191913   
+min    -34.230000  -30.940000  -28.650000  -28.890000  -28.870000  -32.710000   
+25%     -4.005000   -2.512500   -2.017500   -1.522500   -1.392500   -3.780000   
+50%      1.040000    1.385000    1.325000    1.550000    1.575000    1.330000   
+75%      5.272500    5.420000    4.860000    4.435000    4.920000    5.422500   
+max     39.780000   38.620000   28.130000   27.780000   33.270000   27.190000   
+
+               r7          r8          r9         r10         r11         r12  
+count  620.000000  620.000000  620.000000  620.000000  620.000000  620.000000  
+mean     1.129419    1.340790    1.337194    1.399097    0.924806    1.187403  
+std      5.970209    5.436645    5.303851    6.006386    6.629673    5.486914  
+min    -31.630000  -27.760000  -26.040000  -28.840000  -29.630000  -29.150000  
+25%     -2.345000   -1.520000   -1.665000   -1.672500   -3.242500   -1.882500  
+50%      1.525000    1.590000    1.550000    1.845000    1.550000    1.415000  
+75%      4.835000    4.442500    4.692500    4.912500    5.362500    4.557500  
+max     26.120000   26.340000   27.340000   30.040000   24.480000   25.030000  
+
+              r13         r14         r15         r16         r17         r18  
+count  620.000000  620.000000  620.000000  620.000000  620.000000  620.000000   
+mean     1.196694    1.284516    1.465565    1.020306    0.990065    1.132145   
+std      5.029742    4.922348    5.487936    5.889799    5.167744    5.059851   
+min    -24.500000  -22.820000  -26.170000  -25.940000  -28.830000  -26.310000   
+25%     -1.520000   -1.330000   -1.250000   -2.437500   -1.942500   -1.845000   
+50%      1.530000    1.510000    1.550000    1.125000    1.255000    1.455000   
+75%      4.312500    4.270000    4.650000    4.772500    4.130000    4.202500   
+max     21.940000   23.400000   29.200000   26.020000   20.450000   24.010000   
+
+              r19         r20         r21         r22         r23         r24  
+count  620.000000  620.000000  620.000000  620.000000  620.000000  620.000000   
+mean     1.248306    1.255935    0.881742    0.938048    0.897306    0.966081   
+std      4.808669    5.486291    4.664807    4.440060    4.360432    4.358589   
+min    -21.020000  -23.840000  -21.640000  -22.420000  -21.650000  -19.320000   
+25%     -1.700000   -1.647500   -1.682500   -1.662500   -1.692500   -1.495000   
+50%      1.510000    1.540000    0.985000    1.040000    1.170000    1.105000   
+75%      4.092500    4.452500    3.785000    3.757500    3.432500    3.555000   
+max     24.320000   27.900000   22.350000   16.530000   19.080000   19.760000   
+
+              r25  
+count  620.000000  
+mean     1.023081  
+std      5.012409  
+min    -19.130000  
+25%     -1.905000  
+50%      1.190000  
+75%      3.960000  
+max     17.570000  
+
+-------------------------------- r1 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.635
+Model:                            OLS   Adj. R-squared:                  0.634
+Method:                 Least Squares   F-statistic:                     1073.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          3.36e-137
+Time:                        22:00:54   Log-Likelihood:                -1855.3
+No. Observations:                 620   AIC:                             3715.
+Df Residuals:                     618   BIC:                             3723.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.4751      0.195     -2.433      0.015        -0.859    -0.092
+Mkt_RF         1.4269      0.044     32.756      0.000         1.341     1.512
+==============================================================================
+Omnibus:                      191.284   Durbin-Watson:                   1.814
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1486.379
+Skew:                           1.146   Prob(JB):                         0.00
+Kurtosis:                      10.231   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r2 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.633
+Model:                            OLS   Adj. R-squared:                  0.632
+Method:                 Least Squares   F-statistic:                     1064.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.61e-136
+Time:                        22:00:54   Log-Likelihood:                -1765.4
+No. Observations:                 620   AIC:                             3535.
+Df Residuals:                     618   BIC:                             3544.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1759      0.169      1.041      0.298        -0.156     0.508
+Mkt_RF         1.2296      0.038     32.626      0.000         1.156     1.304
+==============================================================================
+Omnibus:                      206.955   Durbin-Watson:                   1.921
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             3504.069
+Skew:                           1.013   Prob(JB):                         0.00
+Kurtosis:                      14.469   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r3 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.666
+Model:                            OLS   Adj. R-squared:                  0.665
+Method:                 Least Squares   F-statistic:                     1230.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          3.74e-149
+Time:                        22:00:54   Log-Likelihood:                -1651.3
+No. Observations:                 620   AIC:                             3307.
+Df Residuals:                     618   BIC:                             3315.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.2673      0.141      1.902      0.058        -0.009     0.543
+Mkt_RF         1.0996      0.031     35.076      0.000         1.038     1.161
+==============================================================================
+Omnibus:                      122.212   Durbin-Watson:                   1.918
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              637.362
+Skew:                           0.765   Prob(JB):                    3.97e-139
+Kurtosis:                       7.725   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r4 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.642
+Model:                            OLS   Adj. R-squared:                  0.642
+Method:                 Least Squares   F-statistic:                     1110.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          4.03e-140
+Time:                        22:00:54   Log-Likelihood:                -1636.3
+No. Observations:                 620   AIC:                             3277.
+Df Residuals:                     618   BIC:                             3285.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.4803      0.137      3.502      0.000         0.211     0.750
+Mkt_RF         1.0195      0.031     33.319      0.000         0.959     1.080
+==============================================================================
+Omnibus:                       87.881   Durbin-Watson:                   1.866
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              204.870
+Skew:                           0.762   Prob(JB):                     3.26e-45
+Kurtosis:                       5.368   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r5 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.623
+Model:                            OLS   Adj. R-squared:                  0.622
+Method:                 Least Squares   F-statistic:                     1019.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          7.31e-133
+Time:                        22:00:54   Log-Likelihood:                -1696.7
+No. Observations:                 620   AIC:                             3397.
+Df Residuals:                     618   BIC:                             3406.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.5744      0.151      3.798      0.000         0.277     0.871
+Mkt_RF         1.0770      0.034     31.926      0.000         1.011     1.143
+==============================================================================
+Omnibus:                       84.602   Durbin-Watson:                   1.730
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              206.034
+Skew:                           0.722   Prob(JB):                     1.82e-45
+Kurtosis:                       5.428   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r6 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.749
+Model:                            OLS   Adj. R-squared:                  0.748
+Method:                 Least Squares   F-statistic:                     1841.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.70e-187
+Time:                        22:00:54   Log-Likelihood:                -1675.9
+No. Observations:                 620   AIC:                             3356.
+Df Residuals:                     618   BIC:                             3365.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.2270      0.146     -1.552      0.121        -0.514     0.060
+Mkt_RF         1.3997      0.033     42.909      0.000         1.336     1.464
+==============================================================================
+Omnibus:                       79.251   Durbin-Watson:                   1.943
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              581.606
+Skew:                           0.257   Prob(JB):                    5.08e-127
+Kurtosis:                       7.717   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r7 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.761
+Model:                            OLS   Adj. R-squared:                  0.761
+Method:                 Least Squares   F-statistic:                     1973.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.74e-194
+Time:                        22:00:54   Log-Likelihood:                -1544.1
+No. Observations:                 620   AIC:                             3092.
+Df Residuals:                     618   BIC:                             3101.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1254      0.118      1.060      0.289        -0.107     0.358
+Mkt_RF         1.1714      0.026     44.414      0.000         1.120     1.223
+==============================================================================
+Omnibus:                       59.404   Durbin-Watson:                   2.008
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              152.353
+Skew:                           0.496   Prob(JB):                     8.26e-34
+Kurtosis:                       5.216   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r8 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.750
+Model:                            OLS   Adj. R-squared:                  0.750
+Method:                 Least Squares   F-statistic:                     1857.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          2.46e-188
+Time:                        22:00:54   Log-Likelihood:                -1500.9
+No. Observations:                 620   AIC:                             3006.
+Df Residuals:                     618   BIC:                             3015.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.3937      0.110      3.571      0.000         0.177     0.610
+Mkt_RF         1.0598      0.025     43.088      0.000         1.012     1.108
+==============================================================================
+Omnibus:                       27.550   Durbin-Watson:                   2.065
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               53.994
+Skew:                           0.271   Prob(JB):                     1.88e-12
+Kurtosis:                       4.340   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r9 | Mkt-RF ---------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.728
+Model:                            OLS   Adj. R-squared:                  0.728
+Method:                 Least Squares   F-statistic:                     1655.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          6.71e-177
+Time:                        22:00:54   Log-Likelihood:                -1510.8
+No. Observations:                 620   AIC:                             3026.
+Df Residuals:                     618   BIC:                             3035.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.4121      0.112      3.678      0.000         0.192     0.632
+Mkt_RF         1.0167      0.025     40.676      0.000         0.968     1.066
+==============================================================================
+Omnibus:                       28.901   Durbin-Watson:                   1.960
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               61.646
+Skew:                           0.254   Prob(JB):                     4.11e-14
+Kurtosis:                       4.459   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r10 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.679
+Model:                            OLS   Adj. R-squared:                  0.678
+Method:                 Least Squares   F-statistic:                     1307.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.36e-154
+Time:                        22:00:55   Log-Likelihood:                -1639.7
+No. Observations:                 620   AIC:                             3283.
+Df Residuals:                     618   BIC:                             3292.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.4252      0.138      3.083      0.002         0.154     0.696
+Mkt_RF         1.1123      0.031     36.149      0.000         1.052     1.173
+==============================================================================
+Omnibus:                       40.198   Durbin-Watson:                   1.820
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              141.209
+Skew:                           0.154   Prob(JB):                     2.17e-31
+Kurtosis:                       5.318   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r11 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.794
+Model:                            OLS   Adj. R-squared:                  0.794
+Method:                 Least Squares   F-statistic:                     2387.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          2.17e-214
+Time:                        22:00:55   Log-Likelihood:                -1563.4
+No. Observations:                 620   AIC:                             3131.
+Df Residuals:                     618   BIC:                             3140.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.1597      0.122     -1.310      0.191        -0.399     0.080
+Mkt_RF         1.3290      0.027     48.853      0.000         1.276     1.382
+==============================================================================
+Omnibus:                      105.790   Durbin-Watson:                   2.079
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1653.257
+Skew:                           0.067   Prob(JB):                         0.00
+Kurtosis:                      10.999   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r12 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.829
+Model:                            OLS   Adj. R-squared:                  0.828
+Method:                 Least Squares   F-statistic:                     2987.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          7.45e-239
+Time:                        22:00:55   Log-Likelihood:                -1389.7
+No. Observations:                 620   AIC:                             2783.
+Df Residuals:                     618   BIC:                             2792.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.2077      0.092      2.253      0.025         0.027     0.389
+Mkt_RF         1.1237      0.021     54.655      0.000         1.083     1.164
+==============================================================================
+Omnibus:                       34.884   Durbin-Watson:                   2.018
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               94.901
+Skew:                           0.223   Prob(JB):                     2.47e-21
+Kurtosis:                       4.864   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r13 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.793
+Model:                            OLS   Adj. R-squared:                  0.792
+Method:                 Least Squares   F-statistic:                     2364.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          2.20e-213
+Time:                        22:00:55   Log-Likelihood:                -1394.7
+No. Observations:                 620   AIC:                             2793.
+Df Residuals:                     618   BIC:                             2802.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.2762      0.093      2.973      0.003         0.094     0.459
+Mkt_RF         1.0077      0.021     48.622      0.000         0.967     1.048
+==============================================================================
+Omnibus:                       44.530   Durbin-Watson:                   1.879
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              153.303
+Skew:                           0.232   Prob(JB):                     5.14e-34
+Kurtosis:                       5.391   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r14 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.753
+Model:                            OLS   Adj. R-squared:                  0.753
+Method:                 Least Squares   F-statistic:                     1885.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          6.81e-190
+Time:                        22:00:55   Log-Likelihood:                -1435.5
+No. Observations:                 620   AIC:                             2875.
+Df Residuals:                     618   BIC:                             2884.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.3878      0.099      3.908      0.000         0.193     0.583
+Mkt_RF         0.9612      0.022     43.422      0.000         0.918     1.005
+==============================================================================
+Omnibus:                       55.044   Durbin-Watson:                   1.911
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              200.860
+Skew:                           0.327   Prob(JB):                     2.42e-44
+Kurtosis:                       5.710   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r15 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.694
+Model:                            OLS   Adj. R-squared:                  0.694
+Method:                 Least Squares   F-statistic:                     1402.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          4.49e-161
+Time:                        22:00:55   Log-Likelihood:                -1569.0
+No. Observations:                 620   AIC:                             3142.
+Df Residuals:                     618   BIC:                             3151.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.5348      0.123      4.346      0.000         0.293     0.776
+Mkt_RF         1.0279      0.027     37.442      0.000         0.974     1.082
+==============================================================================
+Omnibus:                       55.010   Durbin-Watson:                   1.742
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              139.268
+Skew:                           0.462   Prob(JB):                     5.73e-31
+Kurtosis:                       5.130   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r16 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.849
+Model:                            OLS   Adj. R-squared:                  0.848
+Method:                 Least Squares   F-statistic:                     3464.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.52e-255
+Time:                        22:00:55   Log-Likelihood:                -1395.1
+No. Observations:                 620   AIC:                             2794.
+Df Residuals:                     618   BIC:                             2803.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0089      0.093     -0.096      0.924        -0.191     0.174
+Mkt_RF         1.2207      0.021     58.859      0.000         1.180     1.261
+==============================================================================
+Omnibus:                      306.847   Durbin-Watson:                   1.936
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6886.854
+Skew:                           1.676   Prob(JB):                         0.00
+Kurtosis:                      18.980   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r17 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.867
+Model:                            OLS   Adj. R-squared:                  0.867
+Method:                 Least Squares   F-statistic:                     4025.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          8.20e-273
+Time:                        22:00:55   Log-Likelihood:                -1274.5
+No. Observations:                 620   AIC:                             2553.
+Df Residuals:                     618   BIC:                             2562.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0311      0.077      0.406      0.685        -0.119     0.181
+Mkt_RF         1.0832      0.017     63.442      0.000         1.050     1.117
+==============================================================================
+Omnibus:                       50.976   Durbin-Watson:                   1.744
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              131.219
+Skew:                           0.419   Prob(JB):                     3.21e-29
+Kurtosis:                       5.092   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r18 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.820
+Model:                            OLS   Adj. R-squared:                  0.819
+Method:                 Least Squares   F-statistic:                     2809.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          4.77e-232
+Time:                        22:00:55   Log-Likelihood:                -1355.1
+No. Observations:                 620   AIC:                             2714.
+Df Residuals:                     618   BIC:                             2723.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.2001      0.087      2.296      0.022         0.029     0.371
+Mkt_RF         1.0304      0.019     52.999      0.000         0.992     1.069
+==============================================================================
+Omnibus:                       94.995   Durbin-Watson:                   1.765
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              586.034
+Skew:                           0.494   Prob(JB):                    5.55e-128
+Kurtosis:                       7.659   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r19 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.776
+Model:                            OLS   Adj. R-squared:                  0.776
+Method:                 Least Squares   F-statistic:                     2142.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          5.30e-203
+Time:                        22:00:55   Log-Likelihood:                -1390.7
+No. Observations:                 620   AIC:                             2785.
+Df Residuals:                     618   BIC:                             2794.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.3557      0.092      3.854      0.000         0.174     0.537
+Mkt_RF         0.9531      0.021     46.284      0.000         0.913     0.994
+==============================================================================
+Omnibus:                       69.653   Durbin-Watson:                   1.849
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              202.470
+Skew:                           0.543   Prob(JB):                     1.08e-44
+Kurtosis:                       5.581   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r20 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.710
+Model:                            OLS   Adj. R-squared:                  0.710
+Method:                 Least Squares   F-statistic:                     1514.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          2.61e-168
+Time:                        22:00:55   Log-Likelihood:                -1551.6
+No. Observations:                 620   AIC:                             3107.
+Df Residuals:                     618   BIC:                             3116.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.3197      0.120      2.671      0.008         0.085     0.555
+Mkt_RF         1.0386      0.027     38.907      0.000         0.986     1.091
+==============================================================================
+Omnibus:                       50.174   Durbin-Watson:                   1.807
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              137.966
+Skew:                           0.388   Prob(JB):                     1.10e-30
+Kurtosis:                       5.177   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r21 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.882
+Model:                            OLS   Adj. R-squared:                  0.881
+Method:                 Least Squares   F-statistic:                     4605.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.29e-288
+Time:                        22:00:55   Log-Likelihood:                -1174.4
+No. Observations:                 620   AIC:                             2353.
+Df Residuals:                     618   BIC:                             2362.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0276      0.065     -0.423      0.672        -0.155     0.100
+Mkt_RF         0.9859      0.015     67.860      0.000         0.957     1.014
+==============================================================================
+Omnibus:                        8.955   Durbin-Watson:                   1.845
+Prob(Omnibus):                  0.011   Jarque-Bera (JB):               12.304
+Skew:                           0.125   Prob(JB):                      0.00213
+Kurtosis:                       3.644   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r22 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.874
+Model:                            OLS   Adj. R-squared:                  0.873
+Method:                 Least Squares   F-statistic:                     4270.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          9.93e-280
+Time:                        22:00:55   Log-Likelihood:                -1163.9
+No. Observations:                 620   AIC:                             2332.
+Df Residuals:                     618   BIC:                             2341.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0555      0.064      0.868      0.386        -0.070     0.181
+Mkt_RF         0.9334      0.014     65.349      0.000         0.905     0.961
+==============================================================================
+Omnibus:                       89.708   Durbin-Watson:                   1.964
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              640.707
+Skew:                          -0.387   Prob(JB):                    7.45e-140
+Kurtosis:                       7.920   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r23 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.791
+Model:                            OLS   Adj. R-squared:                  0.791
+Method:                 Least Squares   F-statistic:                     2343.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.99e-212
+Time:                        22:00:55   Log-Likelihood:                -1308.2
+No. Observations:                 620   AIC:                             2620.
+Df Residuals:                     618   BIC:                             2629.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0459      0.081      0.568      0.571        -0.113     0.205
+Mkt_RF         0.8725      0.018     48.404      0.000         0.837     0.908
+==============================================================================
+Omnibus:                       58.706   Durbin-Watson:                   1.846
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              340.066
+Skew:                          -0.074   Prob(JB):                     1.43e-74
+Kurtosis:                       6.625   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r24 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.716
+Model:                            OLS   Adj. R-squared:                  0.715
+Method:                 Least Squares   F-statistic:                     1556.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          5.86e-171
+Time:                        22:00:55   Log-Likelihood:                -1402.3
+No. Observations:                 620   AIC:                             2809.
+Df Residuals:                     618   BIC:                             2818.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1375      0.094      1.462      0.144        -0.047     0.322
+Mkt_RF         0.8277      0.021     39.449      0.000         0.787     0.869
+==============================================================================
+Omnibus:                       91.086   Durbin-Watson:                   2.000
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1053.882
+Skew:                           0.055   Prob(JB):                    1.42e-229
+Kurtosis:                       9.386   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------------------- r25 | Mkt-RF --------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.621
+Model:                            OLS   Adj. R-squared:                  0.621
+Method:                 Least Squares   F-statistic:                     1015.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.72e-132
+Time:                        22:00:55   Log-Likelihood:                -1578.0
+No. Observations:                 620   AIC:                             3160.
+Df Residuals:                     618   BIC:                             3169.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1641      0.125      1.314      0.189        -0.081     0.409
+Mkt_RF         0.8873      0.028     31.855      0.000         0.833     0.942
+==============================================================================
+Omnibus:                       51.828   Durbin-Watson:                   2.028
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              261.272
+Skew:                           0.048   Prob(JB):                     1.84e-57
+Kurtosis:                       6.179   Cond. No.                         4.52
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r1 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.920
+Model:                            OLS   Adj. R-squared:                  0.920
+Method:                 Least Squares   F-statistic:                     2373.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1382.9
+No. Observations:                 620   AIC:                             2774.
+Df Residuals:                     616   BIC:                             2791.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.4887      0.093     -5.272      0.000        -0.671    -0.307
+Mkt_RF         1.0669      0.022     48.231      0.000         1.024     1.110
+SMB            1.3667      0.031     44.233      0.000         1.306     1.427
+HML           -0.4862      0.033    -14.621      0.000        -0.552    -0.421
+==============================================================================
+Omnibus:                       70.725   Durbin-Watson:                   2.002
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              454.919
+Skew:                           0.223   Prob(JB):                     1.64e-99
+Kurtosis:                       7.173   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r2 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.942
+Model:                            OLS   Adj. R-squared:                  0.942
+Method:                 Least Squares   F-statistic:                     3365.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1190.6
+No. Observations:                 620   AIC:                             2389.
+Df Residuals:                     616   BIC:                             2407.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0108      0.068      0.159      0.874        -0.123     0.144
+Mkt_RF         0.9527      0.016     58.726      0.000         0.921     0.985
+SMB            1.2963      0.023     57.208      0.000         1.252     1.341
+HML           -0.1237      0.024     -5.070      0.000        -0.172    -0.076
+==============================================================================
+Omnibus:                      107.666   Durbin-Watson:                   2.157
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              370.441
+Skew:                           0.789   Prob(JB):                     3.63e-81
+Kurtosis:                       6.442   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r3 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.954
+Model:                            OLS   Adj. R-squared:                  0.954
+Method:                 Least Squares   F-statistic:                     4279.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1035.0
+No. Observations:                 620   AIC:                             2078.
+Df Residuals:                     616   BIC:                             2096.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0170      0.053      0.322      0.748        -0.087     0.121
+Mkt_RF         0.9130      0.013     72.338      0.000         0.888     0.938
+SMB            1.0939      0.018     62.050      0.000         1.059     1.129
+HML            0.1418      0.019      7.476      0.000         0.105     0.179
+==============================================================================
+Omnibus:                       22.293   Durbin-Watson:                   2.016
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               39.103
+Skew:                           0.246   Prob(JB):                     3.23e-09
+Kurtosis:                       4.127   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r4 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.946
+Model:                            OLS   Adj. R-squared:                  0.946
+Method:                 Least Squares   F-statistic:                     3606.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1049.5
+No. Observations:                 620   AIC:                             2107.
+Df Residuals:                     616   BIC:                             2125.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1590      0.054      2.936      0.003         0.053     0.265
+Mkt_RF         0.8806      0.013     68.147      0.000         0.855     0.906
+SMB            1.0286      0.018     56.992      0.000         0.993     1.064
+HML            0.3242      0.019     16.688      0.000         0.286     0.362
+==============================================================================
+Omnibus:                       93.954   Durbin-Watson:                   1.995
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              214.488
+Skew:                           0.818   Prob(JB):                     2.66e-47
+Kurtosis:                       5.372   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r5 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.945
+Model:                            OLS   Adj. R-squared:                  0.944
+Method:                 Least Squares   F-statistic:                     3502.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1101.8
+No. Observations:                 620   AIC:                             2212.
+Df Residuals:                     616   BIC:                             2229.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1431      0.059      2.429      0.015         0.027     0.259
+Mkt_RF         0.9729      0.014     69.210      0.000         0.945     1.001
+SMB            1.0726      0.020     54.626      0.000         1.034     1.111
+HML            0.5515      0.021     26.100      0.000         0.510     0.593
+==============================================================================
+Omnibus:                       38.955   Durbin-Watson:                   1.974
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              101.035
+Skew:                           0.294   Prob(JB):                     1.15e-22
+Kurtosis:                       4.888   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r6 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.958
+Model:                            OLS   Adj. R-squared:                  0.958
+Method:                 Least Squares   F-statistic:                     4685.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1121.3
+No. Observations:                 620   AIC:                             2251.
+Df Residuals:                     616   BIC:                             2268.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.1665      0.061     -2.738      0.006        -0.286    -0.047
+Mkt_RF         1.1059      0.015     76.233      0.000         1.077     1.134
+SMB            1.0018      0.020     49.442      0.000         0.962     1.042
+HML           -0.5130      0.022    -23.523      0.000        -0.556    -0.470
+==============================================================================
+Omnibus:                       17.451   Durbin-Watson:                   1.998
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               37.294
+Skew:                          -0.009   Prob(JB):                     7.97e-09
+Kurtosis:                       4.201   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r7 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.952
+Model:                            OLS   Adj. R-squared:                  0.952
+Method:                 Least Squares   F-statistic:                     4097.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1045.3
+No. Observations:                 620   AIC:                             2099.
+Df Residuals:                     616   BIC:                             2116.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0370      0.054     -0.689      0.491        -0.143     0.069
+Mkt_RF         1.0022      0.013     78.089      0.000         0.977     1.027
+SMB            0.8896      0.018     49.629      0.000         0.854     0.925
+HML            0.0241      0.019      1.248      0.213        -0.014     0.062
+==============================================================================
+Omnibus:                       66.464   Durbin-Watson:                   1.919
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              194.922
+Skew:                           0.513   Prob(JB):                     4.71e-43
+Kurtosis:                       5.548   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r8 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.946
+Model:                            OLS   Adj. R-squared:                  0.946
+Method:                 Least Squares   F-statistic:                     3605.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1025.5
+No. Observations:                 620   AIC:                             2059.
+Df Residuals:                     616   BIC:                             2077.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1269      0.052      2.437      0.015         0.025     0.229
+Mkt_RF         0.9637      0.012     77.535      0.000         0.939     0.988
+SMB            0.7819      0.017     45.038      0.000         0.748     0.816
+HML            0.2963      0.019     15.859      0.000         0.260     0.333
+==============================================================================
+Omnibus:                       37.939   Durbin-Watson:                   2.002
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              129.333
+Skew:                           0.134   Prob(JB):                     8.24e-29
+Kurtosis:                       5.221   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------- r9 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.942
+Model:                            OLS   Adj. R-squared:                  0.942
+Method:                 Least Squares   F-statistic:                     3345.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1031.0
+No. Observations:                 620   AIC:                             2070.
+Df Residuals:                     616   BIC:                             2088.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0746      0.053      1.420      0.156        -0.029     0.178
+Mkt_RF         0.9663      0.013     77.056      0.000         0.942     0.991
+SMB            0.7233      0.018     41.293      0.000         0.689     0.758
+HML            0.4754      0.019     25.218      0.000         0.438     0.512
+==============================================================================
+Omnibus:                       27.871   Durbin-Watson:                   1.863
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               70.589
+Skew:                          -0.156   Prob(JB):                     4.70e-16
+Kurtosis:                       4.623   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r10 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.946
+Model:                            OLS   Adj. R-squared:                  0.946
+Method:                 Least Squares   F-statistic:                     3588.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1087.8
+No. Observations:                 620   AIC:                             2184.
+Df Residuals:                     616   BIC:                             2201.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0355      0.058     -0.617      0.537        -0.149     0.078
+Mkt_RF         1.0791      0.014     78.512      0.000         1.052     1.106
+SMB            0.8542      0.019     44.495      0.000         0.817     0.892
+HML            0.6994      0.021     33.848      0.000         0.659     0.740
+==============================================================================
+Omnibus:                       23.720   Durbin-Watson:                   1.971
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               60.591
+Skew:                           0.034   Prob(JB):                     6.97e-14
+Kurtosis:                       4.530   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r11 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.952
+Model:                            OLS   Adj. R-squared:                  0.952
+Method:                 Least Squares   F-statistic:                     4062.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1113.0
+No. Observations:                 620   AIC:                             2234.
+Df Residuals:                     616   BIC:                             2252.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0447      0.060     -0.745      0.457        -0.162     0.073
+Mkt_RF         1.0837      0.014     75.709      0.000         1.056     1.112
+SMB            0.7341      0.020     36.717      0.000         0.695     0.773
+HML           -0.5327      0.022    -24.753      0.000        -0.575    -0.490
+==============================================================================
+Omnibus:                       10.078   Durbin-Watson:                   1.989
+Prob(Omnibus):                  0.006   Jarque-Bera (JB):               16.153
+Skew:                          -0.058   Prob(JB):                     0.000311
+Kurtosis:                       3.782   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r12 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.918
+Model:                            OLS   Adj. R-squared:                  0.918
+Method:                 Least Squares   F-statistic:                     2306.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1160.3
+No. Observations:                 620   AIC:                             2329.
+Df Residuals:                     616   BIC:                             2346.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0606      0.065      0.936      0.349        -0.067     0.188
+Mkt_RF         1.0381      0.015     67.194      0.000         1.008     1.068
+SMB            0.5531      0.022     25.632      0.000         0.511     0.595
+HML            0.1172      0.023      5.049      0.000         0.072     0.163
+==============================================================================
+Omnibus:                       80.145   Durbin-Watson:                   1.911
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              581.296
+Skew:                           0.275   Prob(JB):                    5.93e-127
+Kurtosis:                       7.712   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r13 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.904
+Model:                            OLS   Adj. R-squared:                  0.903
+Method:                 Least Squares   F-statistic:                     1931.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          9.12e-313
+Time:                        22:00:55   Log-Likelihood:                -1156.5
+No. Observations:                 620   AIC:                             2321.
+Df Residuals:                     616   BIC:                             2339.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0242      0.064      0.375      0.708        -0.102     0.151
+Mkt_RF         0.9926      0.015     64.643      0.000         0.962     1.023
+SMB            0.4561      0.021     21.268      0.000         0.414     0.498
+HML            0.3868      0.023     16.757      0.000         0.341     0.432
+==============================================================================
+Omnibus:                       47.925   Durbin-Watson:                   1.973
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              183.053
+Skew:                           0.222   Prob(JB):                     1.78e-40
+Kurtosis:                       5.625   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r14 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.906
+Model:                            OLS   Adj. R-squared:                  0.905
+Method:                 Least Squares   F-statistic:                     1977.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.41e-315
+Time:                        22:00:55   Log-Likelihood:                -1136.6
+No. Observations:                 620   AIC:                             2281.
+Df Residuals:                     616   BIC:                             2299.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0631      0.062      1.012      0.312        -0.059     0.185
+Mkt_RF         0.9894      0.015     66.543      0.000         0.960     1.019
+SMB            0.4092      0.021     19.705      0.000         0.368     0.450
+HML            0.5658      0.022     25.312      0.000         0.522     0.610
+==============================================================================
+Omnibus:                       85.671   Durbin-Watson:                   2.019
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              464.354
+Skew:                           0.462   Prob(JB):                    1.47e-101
+Kurtosis:                       7.138   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r15 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.895
+Model:                            OLS   Adj. R-squared:                  0.894
+Method:                 Least Squares   F-statistic:                     1744.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.77e-300
+Time:                        22:00:55   Log-Likelihood:                -1238.5
+No. Observations:                 620   AIC:                             2485.
+Df Residuals:                     616   BIC:                             2503.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1248      0.073      1.699      0.090        -0.019     0.269
+Mkt_RF         1.0563      0.018     60.270      0.000         1.022     1.091
+SMB            0.5438      0.024     22.213      0.000         0.496     0.592
+HML            0.7041      0.026     26.723      0.000         0.652     0.756
+==============================================================================
+Omnibus:                       90.859   Durbin-Watson:                   1.900
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              294.242
+Skew:                           0.679   Prob(JB):                     1.28e-64
+Kurtosis:                       6.090   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r16 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.937
+Model:                            OLS   Adj. R-squared:                  0.936
+Method:                 Least Squares   F-statistic:                     3036.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1125.0
+No. Observations:                 620   AIC:                             2258.
+Df Residuals:                     616   BIC:                             2276.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1397      0.061      2.284      0.023         0.020     0.260
+Mkt_RF         1.0541      0.015     72.225      0.000         1.025     1.083
+SMB            0.3869      0.020     18.979      0.000         0.347     0.427
+HML           -0.4759      0.022    -21.689      0.000        -0.519    -0.433
+==============================================================================
+Omnibus:                       89.117   Durbin-Watson:                   1.924
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              364.898
+Skew:                           0.589   Prob(JB):                     5.80e-80
+Kurtosis:                       6.569   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r17 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.893
+Model:                            OLS   Adj. R-squared:                  0.893
+Method:                 Least Squares   F-statistic:                     1717.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.23e-298
+Time:                        22:00:55   Log-Likelihood:                -1206.3
+No. Observations:                 620   AIC:                             2421.
+Df Residuals:                     616   BIC:                             2438.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0912      0.070     -1.309      0.191        -0.228     0.046
+Mkt_RF         1.0720      0.017     64.424      0.000         1.039     1.105
+SMB            0.2357      0.023     10.142      0.000         0.190     0.281
+HML            0.1822      0.025      7.286      0.000         0.133     0.231
+==============================================================================
+Omnibus:                       42.091   Durbin-Watson:                   1.800
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              102.679
+Skew:                           0.351   Prob(JB):                     5.05e-23
+Kurtosis:                       4.866   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r18 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.884
+Model:                            OLS   Adj. R-squared:                  0.883
+Method:                 Least Squares   F-statistic:                     1561.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          2.66e-287
+Time:                        22:00:55   Log-Likelihood:                -1219.0
+No. Observations:                 620   AIC:                             2446.
+Df Residuals:                     616   BIC:                             2464.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0258      0.071     -0.362      0.717        -0.166     0.114
+Mkt_RF         1.0748      0.017     63.286      0.000         1.041     1.108
+SMB            0.1922      0.024      8.103      0.000         0.146     0.239
+HML            0.4285      0.026     16.784      0.000         0.378     0.479
+==============================================================================
+Omnibus:                       66.323   Durbin-Watson:                   1.826
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              430.501
+Skew:                           0.140   Prob(JB):                     3.30e-94
+Kurtosis:                       7.073   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r19 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.889
+Model:                            OLS   Adj. R-squared:                  0.888
+Method:                 Least Squares   F-statistic:                     1639.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          4.05e-293
+Time:                        22:00:55   Log-Likelihood:                -1174.1
+No. Observations:                 620   AIC:                             2356.
+Df Residuals:                     616   BIC:                             2374.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0705      0.066      1.065      0.287        -0.059     0.201
+Mkt_RF         1.0128      0.016     64.121      0.000         0.982     1.044
+SMB            0.2288      0.022     10.368      0.000         0.185     0.272
+HML            0.5463      0.024     23.007      0.000         0.500     0.593
+==============================================================================
+Omnibus:                       19.088   Durbin-Watson:                   1.987
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               42.927
+Skew:                           0.002   Prob(JB):                     4.77e-10
+Kurtosis:                       4.289   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r20 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.876
+Model:                            OLS   Adj. R-squared:                  0.876
+Method:                 Least Squares   F-statistic:                     1453.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          6.78e-279
+Time:                        22:00:55   Log-Likelihood:                -1287.9
+No. Observations:                 620   AIC:                             2584.
+Df Residuals:                     616   BIC:                             2601.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0757      0.080     -0.952      0.341        -0.232     0.080
+Mkt_RF         1.1373      0.019     59.924      0.000         1.100     1.175
+SMB            0.2582      0.027      9.739      0.000         0.206     0.310
+HML            0.7797      0.029     27.329      0.000         0.724     0.836
+==============================================================================
+Omnibus:                        9.329   Durbin-Watson:                   2.034
+Prob(Omnibus):                  0.009   Jarque-Bera (JB):               13.185
+Skew:                           0.120   Prob(JB):                      0.00137
+Kurtosis:                       3.673   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r21 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.941
+Model:                            OLS   Adj. R-squared:                  0.941
+Method:                 Least Squares   F-statistic:                     3266.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -959.49
+No. Observations:                 620   AIC:                             1927.
+Df Residuals:                     616   BIC:                             1945.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1645      0.047      3.512      0.000         0.073     0.256
+Mkt_RF         0.9684      0.011     86.657      0.000         0.946     0.990
+SMB           -0.2392      0.016    -15.325      0.000        -0.270    -0.209
+HML           -0.3356      0.017    -19.980      0.000        -0.369    -0.303
+==============================================================================
+Omnibus:                       11.061   Durbin-Watson:                   1.869
+Prob(Omnibus):                  0.004   Jarque-Bera (JB):               18.956
+Skew:                           0.008   Prob(JB):                     7.65e-05
+Kurtosis:                       3.856   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r22 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.898
+Model:                            OLS   Adj. R-squared:                  0.897
+Method:                 Least Squares   F-statistic:                     1803.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.72e-304
+Time:                        22:00:55   Log-Likelihood:                -1098.1
+No. Observations:                 620   AIC:                             2204.
+Df Residuals:                     616   BIC:                             2222.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0318      0.059      0.543      0.588        -0.083     0.147
+Mkt_RF         0.9969      0.014     71.338      0.000         0.969     1.024
+SMB           -0.1996      0.020    -10.226      0.000        -0.238    -0.161
+HML            0.1282      0.021      6.102      0.000         0.087     0.169
+==============================================================================
+Omnibus:                       36.908   Durbin-Watson:                   1.876
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              129.477
+Skew:                           0.078   Prob(JB):                     7.66e-29
+Kurtosis:                       5.233   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r23 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.852
+Model:                            OLS   Adj. R-squared:                  0.852
+Method:                 Least Squares   F-statistic:                     1187.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.78e-255
+Time:                        22:00:55   Log-Likelihood:                -1200.6
+No. Observations:                 620   AIC:                             2409.
+Df Residuals:                     616   BIC:                             2427.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0634      0.069     -0.918      0.359        -0.199     0.072
+Mkt_RF         0.9743      0.016     59.100      0.000         0.942     1.007
+SMB           -0.2071      0.023     -8.995      0.000        -0.252    -0.162
+HML            0.3207      0.025     12.942      0.000         0.272     0.369
+==============================================================================
+Omnibus:                       70.976   Durbin-Watson:                   1.806
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              317.995
+Skew:                           0.402   Prob(JB):                     8.88e-70
+Kurtosis:                       6.415   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r24 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.889
+Model:                            OLS   Adj. R-squared:                  0.888
+Method:                 Least Squares   F-statistic:                     1637.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          5.76e-293
+Time:                        22:00:55   Log-Likelihood:                -1112.1
+No. Observations:                 620   AIC:                             2232.
+Df Residuals:                     616   BIC:                             2250.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.1150      0.060     -1.919      0.055        -0.233     0.003
+Mkt_RF         0.9833      0.014     68.798      0.000         0.955     1.011
+SMB           -0.1813      0.020     -9.079      0.000        -0.220    -0.142
+HML            0.6286      0.021     29.256      0.000         0.586     0.671
+==============================================================================
+Omnibus:                       57.575   Durbin-Watson:                   2.084
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              223.642
+Skew:                           0.327   Prob(JB):                     2.73e-49
+Kurtosis:                       5.869   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ r25 - RF | Mkt-RF, SMB, HML -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.801
+Model:                            OLS   Adj. R-squared:                  0.800
+Method:                 Least Squares   F-statistic:                     825.8
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          2.46e-215
+Time:                        22:00:55   Log-Likelihood:                -1378.9
+No. Observations:                 620   AIC:                             2766.
+Df Residuals:                     616   BIC:                             2784.
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.1746      0.092     -1.896      0.058        -0.356     0.006
+Mkt_RF         1.0467      0.022     47.617      0.000         1.004     1.090
+SMB           -0.0585      0.031     -1.905      0.057        -0.119     0.002
+HML            0.7735      0.033     23.410      0.000         0.709     0.838
+==============================================================================
+Omnibus:                       32.975   Durbin-Watson:                   2.102
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               98.423
+Skew:                          -0.139   Prob(JB):                     4.24e-22
+Kurtosis:                       4.932   Cond. No.                         4.85
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r1 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.934
+Model:                            OLS   Adj. R-squared:                  0.933
+Method:                 Least Squares   F-statistic:                     1727.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1326.5
+No. Observations:                 620   AIC:                             2665.
+Df Residuals:                     614   BIC:                             2692.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.3025      0.088     -3.452      0.001        -0.475    -0.130
+Mkt_RF         1.0309      0.021     48.335      0.000         0.989     1.073
+SMB            1.2573      0.030     41.987      0.000         1.198     1.316
+HML           -0.4259      0.042    -10.193      0.000        -0.508    -0.344
+RMW           -0.4824      0.044    -10.984      0.000        -0.569    -0.396
+CMA           -0.1245      0.064     -1.956      0.051        -0.249     0.000
+==============================================================================
+Omnibus:                       73.206   Durbin-Watson:                   2.161
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              366.236
+Skew:                           0.378   Prob(JB):                     2.97e-80
+Kurtosis:                       6.688   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r2 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.951
+Model:                            OLS   Adj. R-squared:                  0.950
+Method:                 Least Squares   F-statistic:                     2367.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1143.0
+No. Observations:                 620   AIC:                             2298.
+Df Residuals:                     614   BIC:                             2325.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1118      0.065      1.715      0.087        -0.016     0.240
+Mkt_RF         0.9380      0.016     59.131      0.000         0.907     0.969
+SMB            1.2246      0.022     54.983      0.000         1.181     1.268
+HML           -0.1278      0.031     -4.111      0.000        -0.189    -0.067
+RMW           -0.3117      0.033     -9.540      0.000        -0.376    -0.248
+CMA            0.0157      0.047      0.331      0.741        -0.077     0.109
+==============================================================================
+Omnibus:                       49.542   Durbin-Watson:                   2.182
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               82.988
+Skew:                           0.549   Prob(JB):                     9.53e-19
+Kurtosis:                       4.417   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r3 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.955
+Model:                            OLS   Adj. R-squared:                  0.954
+Method:                 Least Squares   F-statistic:                     2588.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1031.6
+No. Observations:                 620   AIC:                             2075.
+Df Residuals:                     614   BIC:                             2102.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0029      0.054      0.053      0.958        -0.104     0.110
+Mkt_RF         0.9206      0.013     69.454      0.000         0.895     0.947
+SMB            1.0901      0.019     58.576      0.000         1.054     1.127
+HML            0.1011      0.026      3.893      0.000         0.050     0.152
+RMW           -0.0127      0.027     -0.464      0.643        -0.066     0.041
+CMA            0.0912      0.040      2.306      0.021         0.014     0.169
+==============================================================================
+Omnibus:                       20.513   Durbin-Watson:                   2.052
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               35.314
+Skew:                           0.229   Prob(JB):                     2.15e-08
+Kurtosis:                       4.075   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r4 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.947
+Model:                            OLS   Adj. R-squared:                  0.946
+Method:                 Least Squares   F-statistic:                     2187.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1045.4
+No. Observations:                 620   AIC:                             2103.
+Df Residuals:                     614   BIC:                             2129.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1210      0.056      2.173      0.030         0.012     0.230
+Mkt_RF         0.8929      0.014     65.880      0.000         0.866     0.919
+SMB            1.0384      0.019     54.570      0.000         1.001     1.076
+HML            0.2745      0.027     10.340      0.000         0.222     0.327
+RMW            0.0475      0.028      1.703      0.089        -0.007     0.102
+CMA            0.1097      0.040      2.712      0.007         0.030     0.189
+==============================================================================
+Omnibus:                       98.964   Durbin-Watson:                   2.032
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              242.887
+Skew:                           0.833   Prob(JB):                     1.81e-53
+Kurtosis:                       5.575   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r5 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.945
+Model:                            OLS   Adj. R-squared:                  0.945
+Method:                 Least Squares   F-statistic:                     2110.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1099.7
+No. Observations:                 620   AIC:                             2211.
+Df Residuals:                     614   BIC:                             2238.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1244      0.061      2.047      0.041         0.005     0.244
+Mkt_RF         0.9809      0.015     66.311      0.000         0.952     1.010
+SMB            1.0724      0.021     51.633      0.000         1.032     1.113
+HML            0.5124      0.029     17.679      0.000         0.455     0.569
+RMW            0.0031      0.030      0.103      0.918        -0.057     0.063
+CMA            0.0873      0.044      1.979      0.048         0.001     0.174
+==============================================================================
+Omnibus:                       41.944   Durbin-Watson:                   2.004
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              118.186
+Skew:                           0.294   Prob(JB):                     2.17e-26
+Kurtosis:                       5.057   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r6 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.959
+Model:                            OLS   Adj. R-squared:                  0.959
+Method:                 Least Squares   F-statistic:                     2885.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1112.6
+No. Observations:                 620   AIC:                             2237.
+Df Residuals:                     614   BIC:                             2264.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.1018      0.062     -1.641      0.101        -0.224     0.020
+Mkt_RF         1.0887      0.015     72.078      0.000         1.059     1.118
+SMB            0.9757      0.021     46.007      0.000         0.934     1.017
+HML           -0.4567      0.030    -15.435      0.000        -0.515    -0.399
+RMW           -0.1192      0.031     -3.832      0.000        -0.180    -0.058
+CMA           -0.1230      0.045     -2.729      0.007        -0.212    -0.034
+==============================================================================
+Omnibus:                       21.432   Durbin-Watson:                   2.033
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               51.654
+Skew:                          -0.003   Prob(JB):                     6.07e-12
+Kurtosis:                       4.414   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r7 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.954
+Model:                            OLS   Adj. R-squared:                  0.954
+Method:                 Least Squares   F-statistic:                     2557.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1032.7
+No. Observations:                 620   AIC:                             2077.
+Df Residuals:                     614   BIC:                             2104.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0955      0.055     -1.750      0.081        -0.203     0.012
+Mkt_RF         1.0148      0.013     76.423      0.000         0.989     1.041
+SMB            0.9207      0.019     49.381      0.000         0.884     0.957
+HML           -0.0047      0.026     -0.182      0.856        -0.056     0.046
+RMW            0.1379      0.027      5.043      0.000         0.084     0.192
+CMA            0.0614      0.040      1.549      0.122        -0.016     0.139
+==============================================================================
+Omnibus:                       47.057   Durbin-Watson:                   1.931
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              130.909
+Skew:                           0.353   Prob(JB):                     3.74e-29
+Kurtosis:                       5.137   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r8 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.951
+Model:                            OLS   Adj. R-squared:                  0.951
+Method:                 Least Squares   F-statistic:                     2403.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -993.63
+No. Observations:                 620   AIC:                             1999.
+Df Residuals:                     614   BIC:                             2026.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0586      0.051      1.145      0.253        -0.042     0.159
+Mkt_RF         0.9746      0.012     78.173      0.000         0.950     0.999
+SMB            0.8280      0.018     47.298      0.000         0.794     0.862
+HML            0.2919      0.024     11.949      0.000         0.244     0.340
+RMW            0.2010      0.026      7.828      0.000         0.151     0.251
+CMA            0.0058      0.037      0.156      0.876        -0.067     0.079
+==============================================================================
+Omnibus:                       28.490   Durbin-Watson:                   2.021
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               78.207
+Skew:                           0.110   Prob(JB):                     1.04e-17
+Kurtosis:                       4.726   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+-------------------- r9 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.946
+Model:                            OLS   Adj. R-squared:                  0.945
+Method:                 Least Squares   F-statistic:                     2133.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1012.2
+No. Observations:                 620   AIC:                             2036.
+Df Residuals:                     614   BIC:                             2063.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0002      0.053     -0.004      0.997        -0.104     0.103
+Mkt_RF         0.9839      0.013     76.588      0.000         0.959     1.009
+SMB            0.7594      0.018     42.101      0.000         0.724     0.795
+HML            0.4278      0.025     16.998      0.000         0.378     0.477
+RMW            0.1619      0.026      6.119      0.000         0.110     0.214
+CMA            0.1028      0.038      2.682      0.008         0.028     0.178
+==============================================================================
+Omnibus:                       17.410   Durbin-Watson:                   1.938
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               31.479
+Skew:                          -0.160   Prob(JB):                     1.46e-07
+Kurtosis:                       4.056   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r10 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.946
+Model:                            OLS   Adj. R-squared:                  0.946
+Method:                 Least Squares   F-statistic:                     2160.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1085.9
+No. Observations:                 620   AIC:                             2184.
+Df Residuals:                     614   BIC:                             2210.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0557      0.059     -0.938      0.349        -0.172     0.061
+Mkt_RF         1.0827      0.014     74.826      0.000         1.054     1.111
+SMB            0.8671      0.020     42.684      0.000         0.827     0.907
+HML            0.6959      0.028     24.549      0.000         0.640     0.752
+RMW            0.0564      0.030      1.894      0.059        -0.002     0.115
+CMA            0.0066      0.043      0.153      0.878        -0.078     0.091
+==============================================================================
+Omnibus:                       23.367   Durbin-Watson:                   1.972
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               59.496
+Skew:                           0.005   Prob(JB):                     1.20e-13
+Kurtosis:                       4.518   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r11 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.954
+Model:                            OLS   Adj. R-squared:                  0.954
+Method:                 Least Squares   F-statistic:                     2558.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1097.7
+No. Observations:                 620   AIC:                             2207.
+Df Residuals:                     614   BIC:                             2234.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0381      0.061      0.629      0.529        -0.081     0.157
+Mkt_RF         1.0579      0.015     71.739      0.000         1.029     1.087
+SMB            0.7101      0.021     34.297      0.000         0.669     0.751
+HML           -0.4323      0.029    -14.962      0.000        -0.489    -0.376
+RMW           -0.1141      0.030     -3.757      0.000        -0.174    -0.054
+CMA           -0.2216      0.044     -5.035      0.000        -0.308    -0.135
+==============================================================================
+Omnibus:                       16.739   Durbin-Watson:                   2.023
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               34.840
+Skew:                          -0.025   Prob(JB):                     2.72e-08
+Kurtosis:                       4.160   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r12 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.923
+Model:                            OLS   Adj. R-squared:                  0.922
+Method:                 Least Squares   F-statistic:                     1470.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1142.0
+No. Observations:                 620   AIC:                             2296.
+Df Residuals:                     614   BIC:                             2323.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0037      0.065     -0.058      0.954        -0.132     0.124
+Mkt_RF         1.0482      0.016     66.181      0.000         1.017     1.079
+SMB            0.5969      0.022     26.840      0.000         0.553     0.641
+HML            0.1142      0.031      3.679      0.000         0.053     0.175
+RMW            0.1909      0.033      5.854      0.000         0.127     0.255
+CMA            0.0029      0.047      0.062      0.951        -0.090     0.096
+==============================================================================
+Omnibus:                       62.729   Durbin-Watson:                   1.910
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              332.451
+Skew:                           0.233   Prob(JB):                     6.44e-73
+Kurtosis:                       6.557   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r13 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.912
+Model:                            OLS   Adj. R-squared:                  0.911
+Method:                 Least Squares   F-statistic:                     1274.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          2.40e-321
+Time:                        22:00:55   Log-Likelihood:                -1128.9
+No. Observations:                 620   AIC:                             2270.
+Df Residuals:                     614   BIC:                             2296.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0589      0.064     -0.924      0.356        -0.184     0.066
+Mkt_RF         1.0068      0.016     64.921      0.000         0.976     1.037
+SMB            0.5098      0.022     23.413      0.000         0.467     0.553
+HML            0.3744      0.030     12.324      0.000         0.315     0.434
+RMW            0.2348      0.032      7.353      0.000         0.172     0.298
+CMA            0.0227      0.046      0.491      0.624        -0.068     0.114
+==============================================================================
+Omnibus:                       24.386   Durbin-Watson:                   2.012
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               52.872
+Skew:                           0.185   Prob(JB):                     3.30e-12
+Kurtosis:                       4.382   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r14 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.909
+Model:                            OLS   Adj. R-squared:                  0.909
+Method:                 Least Squares   F-statistic:                     1231.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          3.25e-317
+Time:                        22:00:55   Log-Likelihood:                -1125.1
+No. Observations:                 620   AIC:                             2262.
+Df Residuals:                     614   BIC:                             2289.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0050      0.063     -0.079      0.937        -0.129     0.119
+Mkt_RF         1.0050      0.015     65.207      0.000         0.975     1.035
+SMB            0.4433      0.022     20.484      0.000         0.401     0.486
+HML            0.5260      0.030     17.419      0.000         0.467     0.585
+RMW            0.1520      0.032      4.790      0.000         0.090     0.214
+CMA            0.0857      0.046      1.863      0.063        -0.005     0.176
+==============================================================================
+Omnibus:                       83.344   Durbin-Watson:                   2.072
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              376.988
+Skew:                           0.508   Prob(JB):                     1.37e-82
+Kurtosis:                       6.683   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r15 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.898
+Model:                            OLS   Adj. R-squared:                  0.897
+Method:                 Least Squares   F-statistic:                     1081.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.55e-301
+Time:                        22:00:55   Log-Likelihood:                -1228.5
+No. Observations:                 620   AIC:                             2469.
+Df Residuals:                     614   BIC:                             2496.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0539      0.075      0.721      0.471        -0.093     0.201
+Mkt_RF         1.0715      0.018     58.845      0.000         1.036     1.107
+SMB            0.5816      0.026     22.750      0.000         0.531     0.632
+HML            0.6699      0.036     18.779      0.000         0.600     0.740
+RMW            0.1683      0.037      4.488      0.000         0.095     0.242
+CMA            0.0727      0.054      1.338      0.181        -0.034     0.179
+==============================================================================
+Omnibus:                       74.787   Durbin-Watson:                   1.921
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              226.030
+Skew:                           0.573   Prob(JB):                     8.29e-50
+Kurtosis:                       5.727   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r16 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.937
+Model:                            OLS   Adj. R-squared:                  0.937
+Method:                 Least Squares   F-statistic:                     1841.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1121.0
+No. Observations:                 620   AIC:                             2254.
+Df Residuals:                     614   BIC:                             2281.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1755      0.063      2.791      0.005         0.052     0.299
+Mkt_RF         1.0468      0.015     68.375      0.000         1.017     1.077
+SMB            0.3667      0.021     17.058      0.000         0.324     0.409
+HML           -0.4617      0.030    -15.394      0.000        -0.521    -0.403
+RMW           -0.0895      0.032     -2.838      0.005        -0.151    -0.028
+CMA           -0.0297      0.046     -0.650      0.516        -0.119     0.060
+==============================================================================
+Omnibus:                       62.965   Durbin-Watson:                   1.930
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              217.321
+Skew:                           0.426   Prob(JB):                     6.45e-48
+Kurtosis:                       5.772   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r17 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.902
+Model:                            OLS   Adj. R-squared:                  0.901
+Method:                 Least Squares   F-statistic:                     1125.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          2.78e-306
+Time:                        22:00:55   Log-Likelihood:                -1181.0
+No. Observations:                 620   AIC:                             2374.
+Df Residuals:                     614   BIC:                             2401.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.2132      0.069     -3.077      0.002        -0.349    -0.077
+Mkt_RF         1.1031      0.017     65.402      0.000         1.070     1.136
+SMB            0.2885      0.024     12.181      0.000         0.242     0.335
+HML            0.0863      0.033      2.612      0.009         0.021     0.151
+RMW            0.2389      0.035      6.879      0.000         0.171     0.307
+CMA            0.2091      0.050      4.154      0.000         0.110     0.308
+==============================================================================
+Omnibus:                       19.657   Durbin-Watson:                   1.840
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               34.062
+Skew:                           0.215   Prob(JB):                     4.01e-08
+Kurtosis:                       4.065   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r18 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.889
+Model:                            OLS   Adj. R-squared:                  0.888
+Method:                 Least Squares   F-statistic:                     982.0
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          4.21e-290
+Time:                        22:00:55   Log-Likelihood:                -1205.0
+No. Observations:                 620   AIC:                             2422.
+Df Residuals:                     614   BIC:                             2449.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.1108      0.072     -1.539      0.124        -0.252     0.031
+Mkt_RF         1.0941      0.018     62.401      0.000         1.060     1.129
+SMB            0.2350      0.025      9.548      0.000         0.187     0.283
+HML            0.3797      0.034     11.053      0.000         0.312     0.447
+RMW            0.1912      0.036      5.296      0.000         0.120     0.262
+CMA            0.1049      0.052      2.005      0.045         0.002     0.208
+==============================================================================
+Omnibus:                       58.601   Durbin-Watson:                   1.802
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              345.812
+Skew:                           0.007   Prob(JB):                     8.09e-76
+Kurtosis:                       6.659   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r19 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.889
+Model:                            OLS   Adj. R-squared:                  0.888
+Method:                 Least Squares   F-statistic:                     983.1
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          3.12e-290
+Time:                        22:00:55   Log-Likelihood:                -1173.3
+No. Observations:                 620   AIC:                             2359.
+Df Residuals:                     614   BIC:                             2385.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.0503      0.068      0.735      0.463        -0.084     0.185
+Mkt_RF         1.0193      0.017     61.191      0.000         0.987     1.052
+SMB            0.2341      0.023     10.011      0.000         0.188     0.280
+HML            0.5204      0.033     15.947      0.000         0.456     0.585
+RMW            0.0259      0.034      0.756      0.450        -0.041     0.093
+CMA            0.0572      0.050      1.151      0.250        -0.040     0.155
+==============================================================================
+Omnibus:                       18.126   Durbin-Watson:                   1.984
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               39.561
+Skew:                          -0.009   Prob(JB):                     2.57e-09
+Kurtosis:                       4.237   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r20 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.877
+Model:                            OLS   Adj. R-squared:                  0.876
+Method:                 Least Squares   F-statistic:                     877.0
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          8.74e-277
+Time:                        22:00:55   Log-Likelihood:                -1285.4
+No. Observations:                 620   AIC:                             2583.
+Df Residuals:                     614   BIC:                             2609.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0830      0.082     -1.012      0.312        -0.244     0.078
+Mkt_RF         1.1345      0.020     56.838      0.000         1.095     1.174
+SMB            0.2729      0.028      9.738      0.000         0.218     0.328
+HML            0.8087      0.039     20.680      0.000         0.732     0.885
+RMW            0.0615      0.041      1.495      0.135        -0.019     0.142
+CMA           -0.0660      0.060     -1.108      0.269        -0.183     0.051
+==============================================================================
+Omnibus:                       12.064   Durbin-Watson:                   2.037
+Prob(Omnibus):                  0.002   Jarque-Bera (JB):               17.957
+Skew:                           0.154   Prob(JB):                     0.000126
+Kurtosis:                       3.775   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r21 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.949
+Model:                            OLS   Adj. R-squared:                  0.949
+Method:                 Least Squares   F-statistic:                     2291.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -912.77
+No. Observations:                 620   AIC:                             1838.
+Df Residuals:                     614   BIC:                             1864.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const          0.1118      0.045      2.487      0.013         0.024     0.200
+Mkt_RF         0.9727      0.011     88.884      0.000         0.951     0.994
+SMB           -0.1933      0.015    -12.580      0.000        -0.223    -0.163
+HML           -0.3080      0.021    -14.368      0.000        -0.350    -0.266
+RMW            0.1973      0.023      8.755      0.000         0.153     0.242
+CMA           -0.0657      0.033     -2.012      0.045        -0.130    -0.002
+==============================================================================
+Omnibus:                       18.195   Durbin-Watson:                   1.909
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               39.703
+Skew:                           0.021   Prob(JB):                     2.39e-09
+Kurtosis:                       4.239   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r22 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.909
+Model:                            OLS   Adj. R-squared:                  0.908
+Method:                 Least Squares   F-statistic:                     1227.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          8.39e-317
+Time:                        22:00:55   Log-Likelihood:                -1061.8
+No. Observations:                 620   AIC:                             2136.
+Df Residuals:                     614   BIC:                             2162.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0908      0.057     -1.588      0.113        -0.203     0.021
+Mkt_RF         1.0286      0.014     73.907      0.000         1.001     1.056
+SMB           -0.1478      0.020     -7.562      0.000        -0.186    -0.109
+HML            0.0283      0.027      1.037      0.300        -0.025     0.082
+RMW            0.2353      0.029      8.208      0.000         0.179     0.292
+CMA            0.2180      0.042      5.249      0.000         0.136     0.300
+==============================================================================
+Omnibus:                       21.338   Durbin-Watson:                   1.936
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               50.745
+Skew:                           0.042   Prob(JB):                     9.57e-12
+Kurtosis:                       4.399   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r23 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.854
+Model:                            OLS   Adj. R-squared:                  0.853
+Method:                 Least Squares   F-statistic:                     720.3
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          4.36e-254
+Time:                        22:00:55   Log-Likelihood:                -1196.6
+No. Observations:                 620   AIC:                             2405.
+Df Residuals:                     614   BIC:                             2432.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0976      0.071     -1.374      0.170        -0.237     0.042
+Mkt_RF         0.9880      0.017     57.118      0.000         0.954     1.022
+SMB           -0.2049      0.024     -8.435      0.000        -0.253    -0.157
+HML            0.2565      0.034      7.569      0.000         0.190     0.323
+RMW            0.0160      0.036      0.449      0.653        -0.054     0.086
+CMA            0.1430      0.052      2.770      0.006         0.042     0.244
+==============================================================================
+Omnibus:                       71.663   Durbin-Watson:                   1.812
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              359.731
+Skew:                           0.362   Prob(JB):                     7.68e-79
+Kurtosis:                       6.661   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r24 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.890
+Model:                            OLS   Adj. R-squared:                  0.889
+Method:                 Least Squares   F-statistic:                     996.1
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          8.59e-292
+Time:                        22:00:55   Log-Likelihood:                -1107.3
+No. Observations:                 620   AIC:                             2227.
+Df Residuals:                     614   BIC:                             2253.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.1460      0.062     -2.372      0.018        -0.267    -0.025
+Mkt_RF         0.9883      0.015     65.987      0.000         0.959     1.018
+SMB           -0.1604      0.021     -7.626      0.000        -0.202    -0.119
+HML            0.6266      0.029     21.354      0.000         0.569     0.684
+RMW            0.0912      0.031      2.957      0.003         0.031     0.152
+CMA            0.0027      0.045      0.060      0.952        -0.085     0.090
+==============================================================================
+Omnibus:                       52.096   Durbin-Watson:                   2.089
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              210.575
+Skew:                           0.246   Prob(JB):                     1.88e-46
+Kurtosis:                       5.812   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------- r25 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.806
+Model:                            OLS   Adj. R-squared:                  0.804
+Method:                 Least Squares   F-statistic:                     509.1
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          1.14e-215
+Time:                        22:00:55   Log-Likelihood:                -1371.4
+No. Observations:                 620   AIC:                             2755.
+Df Residuals:                     614   BIC:                             2781.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0850      0.094     -0.903      0.367        -0.270     0.100
+Mkt_RF         1.0237      0.023     44.649      0.000         0.979     1.069
+SMB           -0.0970      0.032     -3.013      0.003        -0.160    -0.034
+HML            0.8446      0.045     18.804      0.000         0.756     0.933
+RMW           -0.1746      0.047     -3.698      0.000        -0.267    -0.082
+CMA           -0.1550      0.068     -2.265      0.024        -0.289    -0.021
+==============================================================================
+Omnibus:                       30.108   Durbin-Watson:                   2.114
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               91.716
+Skew:                           0.013   Prob(JB):                     1.21e-20
+Kurtosis:                       4.884   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+------------------------ HML | Mkt-RF, SMB, RMW, CMA -------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    HML   R-squared:                       0.518
+Model:                            OLS   Adj. R-squared:                  0.515
+Method:                 Least Squares   F-statistic:                     165.0
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):           6.92e-96
+Time:                        22:00:55   Log-Likelihood:                -1305.0
+No. Observations:                 620   AIC:                             2620.
+Df Residuals:                     615   BIC:                             2642.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0438      0.085     -0.518      0.605        -0.210     0.122
+Mkt_RF         0.0070      0.021      0.338      0.736        -0.033     0.047
+SMB            0.0259      0.029      0.899      0.369        -0.031     0.083
+RMW            0.2227      0.041      5.377      0.000         0.141     0.304
+CMA            1.0444      0.045     23.358      0.000         0.957     1.132
+==============================================================================
+Omnibus:                       45.046   Durbin-Watson:                   1.736
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              159.123
+Skew:                          -0.226   Prob(JB):                     2.80e-35
+Kurtosis:                       5.441   Cond. No.                         5.11
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+const = 0: <F test: F=array([[ 0.26812313]]), p=0.604779786913, df_denom=615, df_num=1>
+
+Test for r1's five-factor-regression:
+	const = 0: <F test: F=array([[ 11.91390744]]), p=0.000595432005709, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 61.24142314]]), p=5.60738918135e-25, df_denom=614, df_num=2>
+
+Test for r2's five-factor-regression:
+	const = 0: <F test: F=array([[ 2.94068062]]), p=0.0868789116325, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 50.9636385]]), p=3.33376312267e-21, df_denom=614, df_num=2>
+
+Test for r3's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.00276363]]), p=0.958091427847, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 3.37825816]]), p=0.0347419961733, df_denom=614, df_num=2>
+
+Test for r4's five-factor-regression:
+	const = 0: <F test: F=array([[ 4.72044319]]), p=0.0301878134019, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 4.12177456]]), p=0.0166665705942, df_denom=614, df_num=2>
+
+Test for r5's five-factor-regression:
+	const = 0: <F test: F=array([[ 4.18944751]]), p=0.0411015589248, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 2.08531528]]), p=0.125147170199, df_denom=614, df_num=2>
+
+Test for r6's five-factor-regression:
+	const = 0: <F test: F=array([[ 2.69244936]]), p=0.101336840684, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 8.73419967]]), p=0.000181862012192, df_denom=614, df_num=2>
+
+Test for r7's five-factor-regression:
+	const = 0: <F test: F=array([[ 3.06259712]]), p=0.0806130322435, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 12.71751124]]), p=3.87426400058e-06, df_denom=614, df_num=2>
+
+Test for r8's five-factor-regression:
+	const = 0: <F test: F=array([[ 1.30992099]]), p=0.25285492201, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 33.1968569]]), p=2.04305542175e-14, df_denom=614, df_num=2>
+
+Test for r9's five-factor-regression:
+	const = 0: <F test: F=array([[  1.56825452e-05]]), p=0.996841576446, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 19.13876461]]), p=8.64844008582e-09, df_denom=614, df_num=2>
+
+Test for r10's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.87907044]]), p=0.348825050708, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 1.88503416]]), p=0.15270145787, df_denom=614, df_num=2>
+
+Test for r11's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.39618262]]), p=0.529301451236, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 15.49204111]]), p=2.72990770733e-07, df_denom=614, df_num=2>
+
+Test for r12's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.00330697]]), p=0.954160650792, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 18.66151955]]), p=1.35575951724e-08, df_denom=614, df_num=2>
+
+Test for r13's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.85350134]]), p=0.355926623356, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 28.58853854]]), p=1.34491701623e-12, df_denom=614, df_num=2>
+
+Test for r14's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.0062749]]), p=0.936887988945, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 11.57842695]]), p=1.15893124822e-05, df_denom=614, df_num=2>
+
+Test for r15's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.51928077]]), p=0.471422901579, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 10.0708808]]), p=4.97140381808e-05, df_denom=614, df_num=2>
+
+Test for r16's five-factor-regression:
+	const = 0: <F test: F=array([[ 7.78799771]]), p=0.0054228789325, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 4.04606417]]), p=0.0179595392967, df_denom=614, df_num=2>
+
+Test for r17's five-factor-regression:
+	const = 0: <F test: F=array([[ 9.46830782]]), p=0.00218361841927, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 26.11767678]]), p=1.30015106994e-11, df_denom=614, df_num=2>
+
+Test for r18's five-factor-regression:
+	const = 0: <F test: F=array([[ 2.36700253]]), p=0.124439957587, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 14.12691972]]), p=1.0039919214e-06, df_denom=614, df_num=2>
+
+Test for r19's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.54039435]]), p=0.46255002233, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 0.75670652]]), p=0.469646278754, df_denom=614, df_num=2>
+
+Test for r20's five-factor-regression:
+	const = 0: <F test: F=array([[ 1.0232001]]), p=0.312159582471, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 2.43408631]]), p=0.088523471729, df_denom=614, df_num=2>
+
+Test for r21's five-factor-regression:
+	const = 0: <F test: F=array([[ 6.18610101]]), p=0.013140170573, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 49.93627993]]), p=8.05635351512e-21, df_denom=614, df_num=2>
+
+Test for r22's five-factor-regression:
+	const = 0: <F test: F=array([[ 2.52176899]]), p=0.112799348436, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 38.04546431]]), p=2.65124670946e-16, df_denom=614, df_num=2>
+
+Test for r23's five-factor-regression:
+	const = 0: <F test: F=array([[ 1.88665253]]), p=0.170081263773, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 3.91150927]]), p=0.0205108654663, df_denom=614, df_num=2>
+
+Test for r24's five-factor-regression:
+	const = 0: <F test: F=array([[ 5.62590395]]), p=0.0180042978665, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 4.73710296]]), p=0.00908684831237, df_denom=614, df_num=2>
+
+Test for r25's five-factor-regression:
+	const = 0: <F test: F=array([[ 0.81466927]]), p=0.367097312649, df_denom=614, df_num=1>
+	RMW = 0, CMA = 0: <F test: F=array([[ 7.59007201]]), p=0.00055432228173, df_denom=614, df_num=2>
+
+-------------------- r1 - RF | Mkt-RF, SMB, HML, RMW, CMA --------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.934
+Model:                            OLS   Adj. R-squared:                  0.933
+Method:                 Least Squares   F-statistic:                     1727.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1326.5
+No. Observations:                 620   AIC:                             2665.
+Df Residuals:                     614   BIC:                             2692.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.3025      0.088     -3.452      0.001        -0.475    -0.130
+Mkt_RF         1.0309      0.021     48.335      0.000         0.989     1.073
+SMB            1.2573      0.030     41.987      0.000         1.198     1.316
+HML           -0.4259      0.042    -10.193      0.000        -0.508    -0.344
+RMW           -0.4824      0.044    -10.984      0.000        -0.569    -0.396
+CMA           -0.1245      0.064     -1.956      0.051        -0.249     0.000
+==============================================================================
+Omnibus:                       73.206   Durbin-Watson:                   2.161
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              366.236
+Skew:                           0.378   Prob(JB):                     2.97e-80
+Kurtosis:                       6.688   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+--------------------- its robust-standard-error version ----------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.934
+Model:                            OLS   Adj. R-squared:                  0.933
+Method:                 Least Squares   F-statistic:                     1506.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1326.5
+No. Observations:                 620   AIC:                             2665.
+Df Residuals:                     614   BIC:                             2692.
+Df Model:                           5                                         
+Covariance Type:                  HC1                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.3025      0.087     -3.496      0.001        -0.472    -0.133
+Mkt_RF         1.0309      0.023     43.976      0.000         0.985     1.077
+SMB            1.2573      0.042     29.614      0.000         1.174     1.341
+HML           -0.4259      0.047     -9.061      0.000        -0.518    -0.334
+RMW           -0.4824      0.061     -7.848      0.000        -0.603    -0.362
+CMA           -0.1245      0.081     -1.538      0.125        -0.283     0.034
+==============================================================================
+Omnibus:                       73.206   Durbin-Watson:                   2.161
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              366.236
+Skew:                           0.378   Prob(JB):                     2.97e-80
+Kurtosis:                       6.688   Cond. No.                         5.34
+==============================================================================
+
+Warnings:
+[1] Standard Errors are heteroscedasticity robust (HC1)
+
+White's test: lm = 90.384530, lmpval = 0.000000, fval = 5.111287, fpval = 0.000000
+
+Jarque Bera's test: jb = 366.236029, jb_uv = 0.000000, skew = 0.378244, kurtosis = 6.688442
+
+Breusch-Pagan's test: lm = 11.652284, lmpval = 0.039876, fval = 2.352110, fpval = 0.039481
+
+----------------- FGLS: r1 - RF | Mkt-RF, SMB, HML, RMW, CMA -----------------
+
+                            WLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.945
+Model:                            WLS   Adj. R-squared:                  0.944
+Method:                 Least Squares   F-statistic:                     2091.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1314.2
+No. Observations:                 620   AIC:                             2640.
+Df Residuals:                     614   BIC:                             2667.
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.3165      0.083     -3.830      0.000        -0.479    -0.154
+x1             1.0366      0.019     54.002      0.000         0.999     1.074
+x2             1.2556      0.029     42.718      0.000         1.198     1.313
+x3            -0.4308      0.040    -10.685      0.000        -0.510    -0.352
+x4            -0.4508      0.043    -10.534      0.000        -0.535    -0.367
+x5            -0.1072      0.061     -1.748      0.081        -0.228     0.013
+==============================================================================
+Omnibus:                       77.065   Durbin-Watson:                   2.151
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              268.987
+Skew:                           0.544   Prob(JB):                     3.89e-59
+Kurtosis:                       6.038   Cond. No.                         5.58
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
