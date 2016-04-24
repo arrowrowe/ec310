@@ -75,16 +75,300 @@
             <p>25 Columns of Data + 5 Factors, in 620 Months</p>
           </div>
         </section>
+        <section style="font-size:0.8em">
+          <p><strong>25 Columns of Data</strong></p>
+          <pre><code>               r1          r2          r3          r4         ...         r25
+count  620.000000  620.000000  620.000000  620.000000         ...  620.000000
+mean     0.659468    1.209677    1.234726    1.406839         ...    1.023081
+std      7.967762    6.874563    5.993093    5.655631         ...    5.012409
+min    -34.230000  -30.940000  -28.650000  -28.890000         ...  -19.130000
+25%     -4.005000   -2.512500   -2.017500   -1.522500         ...   -1.905000
+50%      1.040000    1.385000    1.325000    1.550000         ...    1.190000
+75%      5.272500    5.420000    4.860000    4.435000         ...    3.960000
+max     39.780000   38.620000   28.130000   27.780000         ...   17.570000   </code></pre>
+          <p>
+            <strong>5 Factors</strong>
+            <br>
+            <small>6, if we take RF into account</small>
+          </p>
+          <pre><code>           Mkt-RF         SMB         HML        RMW         CMA          RF
+count  620.000000  620.000000  620.000000  620.00000  620.000000  620.000000
+mean     0.510613    0.270113    0.353113    0.24900    0.316823    0.405919
+std      4.457309    3.065671    2.861016    2.13645    1.990368    0.258597
+min    -23.240000  -15.260000  -12.610000  -17.60000   -6.760000    0.000000
+25%     -1.982500   -1.422500   -1.170000   -0.86500   -0.925000    0.270000
+50%      0.860000    0.105000    0.340000    0.16000    0.205000    0.400000
+75%      3.460000    2.112500    1.702500    1.31250    1.535000    0.530000
+max     16.100000   19.050000   13.880000   12.24000    8.930000    1.350000</code></pre>
+          <p><small>And all these happen in the 620 months from 1963/07 to 2015/02.</small></p>
+        </section>
       </section>
       <section>
         <section id="ols">
           <h2>OLS</h2>
           <h4>with One, Three, Five Factors</h4>
         </section>
+        <section>
+          <p>Run 25 5-factor regression with:</p>
+          <p>$$\begin{array} \\
+              R_{pt}-r^f_t=&\alpha_p+\beta_p\left(R^M_t-r^f_t\right) \\
+              &+s_pSMB_t+h_pHML_t \\
+              &+r_pRMW_t+c_pCMA_t \\
+              &+\varepsilon_{pt}, \forall p=1,\cdots 25
+          \end{array}$$</p>
+          <p>
+            <small>Ignore RMW and CMA $\Rightarrow$ 3-factor</small>
+            <br>
+            <small>Then ignore SMB and HML $\Rightarrow$ 1-factor</small>
+          </p>
+        </section>
+        <section>
+          <p>Let's see these applied to $R_1-r^f$.</p>
+        </section>
+        <section style="font-size:0.6em">
+          <p>1-factor Regression</p>
+          <pre><code>                            OLS Regression Results
+==============================================================================
+Dep. Variable:                  r1-RF   R-squared:                       0.635
+Model:                            OLS   Adj. R-squared:                  0.634
+Method:                 Least Squares   F-statistic:                     1073.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):          3.36e-137
+Time:                        22:00:54   Log-Likelihood:                -1855.3
+No. Observations:                 620   AIC:                             3715.
+Df Residuals:                     618   BIC:                             3723.
+Df Model:                           1
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.4751      0.195     -2.433      0.015        -0.859    -0.092
+Mkt-RF         1.4269      0.044     32.756      0.000         1.341     1.512
+==============================================================================
+Omnibus:                      191.284   Durbin-Watson:                   1.814
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1486.379
+Skew:                           1.146   Prob(JB):                         0.00
+Kurtosis:                      10.231   Cond. No.                         4.52
+==============================================================================</code></pre>
+        </section>
+        <section style="font-size:0.6em">
+          <p>3-factor Regression</p>
+          <pre><code>                            OLS Regression Results
+==============================================================================
+Dep. Variable:                  r1-RF   R-squared:                       0.920
+Model:                            OLS   Adj. R-squared:                  0.920
+Method:                 Least Squares   F-statistic:                     2373.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1382.9
+No. Observations:                 620   AIC:                             2774.
+Df Residuals:                     616   BIC:                             2791.
+Df Model:                           3
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.4887      0.093     -5.272      0.000        -0.671    -0.307
+Mkt-RF         1.0669      0.022     48.231      0.000         1.024     1.110
+SMB            1.3667      0.031     44.233      0.000         1.306     1.427
+HML           -0.4862      0.033    -14.621      0.000        -0.552    -0.421
+==============================================================================
+Omnibus:                       70.725   Durbin-Watson:                   2.002
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              454.919
+Skew:                           0.223   Prob(JB):                     1.64e-99
+Kurtosis:                       7.173   Cond. No.                         4.85
+==============================================================================</code></pre>
+        </section>
+        <section style="font-size:0.6em">
+          <p>5-factor Regression</p>
+          <pre><code>                            OLS Regression Results
+==============================================================================
+Dep. Variable:                  r1-RF   R-squared:                       0.934
+Model:                            OLS   Adj. R-squared:                  0.933
+Method:                 Least Squares   F-statistic:                     1727.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1326.5
+No. Observations:                 620   AIC:                             2665.
+Df Residuals:                     614   BIC:                             2692.
+Df Model:                           5
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.3025      0.088     -3.452      0.001        -0.475    -0.130
+Mkt-RF         1.0309      0.021     48.335      0.000         0.989     1.073
+SMB            1.2573      0.030     41.987      0.000         1.198     1.316
+HML           -0.4259      0.042    -10.193      0.000        -0.508    -0.344
+RMW           -0.4824      0.044    -10.984      0.000        -0.569    -0.396
+CMA           -0.1245      0.064     -1.956      0.051        -0.249     0.000
+==============================================================================
+Omnibus:                       73.206   Durbin-Watson:                   2.161
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              366.236
+Skew:                           0.378   Prob(JB):                     2.97e-80
+Kurtosis:                       6.688   Cond. No.                         5.34
+==============================================================================</code></pre>
+        </section>
       </section>
       <section>
         <section id="five">
           <h2>Into Five-Factor Regression</h2>
+        </section>
+        <section>
+          <h3>Is HML redundant?</h3>
+          <p>i.e. for</p>
+          <p>$$\begin{array} \\
+              HML_t=&\gamma+\gamma_1\left(R^M_t-r^f_t\right)+\gamma_2SMB_t \\
+              &+\gamma_3RMW_t+\gamma_4CMA_t+\mu_{pt}
+          \end{array}$$</p>
+          <p>What if we test $H_0:\gamma=0$?</p>
+        </section>
+        <section style="font-size:0.6em">
+          <p>Regression:</p>
+          <pre><code>                            OLS Regression Results
+==============================================================================
+Dep. Variable:                    HML   R-squared:                       0.518
+Model:                            OLS   Adj. R-squared:                  0.515
+Method:                 Least Squares   F-statistic:                     165.0
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):           6.92e-96
+Time:                        22:00:55   Log-Likelihood:                -1305.0
+No. Observations:                 620   AIC:                             2620.
+Df Residuals:                     615   BIC:                             2642.
+Df Model:                           4
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.0438      0.085     -0.518      0.605        -0.210     0.122
+Mkt-RF         0.0070      0.021      0.338      0.736        -0.033     0.047
+SMB            0.0259      0.029      0.899      0.369        -0.031     0.083
+RMW            0.2227      0.041      5.377      0.000         0.141     0.304
+CMA            1.0444      0.045     23.358      0.000         0.957     1.132
+==============================================================================
+Omnibus:                       45.046   Durbin-Watson:                   1.736
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              159.123
+Skew:                          -0.226   Prob(JB):                     2.80e-35
+Kurtosis:                       5.441   Cond. No.                         5.11
+==============================================================================</code></pre>
+        </section>
+        <section>
+          <p>Test $const=0$:</p>
+          <p>$F_{1,615}=0.26812313$</p>
+          <p>$Prob>F=0.604779786913$</p>
+        </section>
+        <section>
+          <h3>Are there More Zeros?</h3>
+          <p>For each 5-factor regression, i.e. $\forall p=1,\cdots 25$:</p>
+          <p>What if we test $H_0:\alpha_p=0$?</p>
+          <p>What about $H_0:r_p=0\wedge c_p=0$?</p>
+        </section>
+        <section>
+          <p>Results for $p=1$:</p>
+          <p>$$\begin{array} \\
+            H_0:\alpha_p=0&\Rightarrow&F_{1,614}=11.91390744 \\
+            &&Prob>F=0.000595432005709 \\
+            H_0:r_p=0\wedge c_p=0&\Rightarrow&F_{2,614}=61.24142314 \\
+            &&Prob>F=5.60738918135\times10^{-25}
+          \end{array}$$</p>
+        </section>
+        <section>
+          <h3>What if we use Robust Standard Error?</h3>
+        </section>
+        <section style="font-size:0.6em">
+          <p>Nonrobust:</p>
+          <pre><code>                            OLS Regression Results
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.934
+Model:                            OLS   Adj. R-squared:                  0.933
+Method:                 Least Squares   F-statistic:                     1727.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1326.5
+No. Observations:                 620   AIC:                             2665.
+Df Residuals:                     614   BIC:                             2692.
+Df Model:                           5
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.3025      0.088     -3.452      0.001        -0.475    -0.130
+Mkt-RF         1.0309      0.021     48.335      0.000         0.989     1.073
+SMB            1.2573      0.030     41.987      0.000         1.198     1.316
+HML           -0.4259      0.042    -10.193      0.000        -0.508    -0.344
+RMW           -0.4824      0.044    -10.984      0.000        -0.569    -0.396
+CMA           -0.1245      0.064     -1.956      0.051        -0.249     0.000
+==============================================================================
+Omnibus:                       73.206   Durbin-Watson:                   2.161
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              366.236
+Skew:                           0.378   Prob(JB):                     2.97e-80
+Kurtosis:                       6.688   Cond. No.                         5.34
+==============================================================================</code></pre>
+        </section>
+        <section style="font-size:0.6em">
+          <p>Robust (HC1):</p>
+          <pre><code>                            OLS Regression Results
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.934
+Model:                            OLS   Adj. R-squared:                  0.933
+Method:                 Least Squares   F-statistic:                     1506.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1326.5
+No. Observations:                 620   AIC:                             2665.
+Df Residuals:                     614   BIC:                             2692.
+Df Model:                           5
+Covariance Type:                  HC1
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.3025      0.087     -3.496      0.001        -0.472    -0.133
+Mkt-RF         1.0309      0.023     43.976      0.000         0.985     1.077
+SMB            1.2573      0.042     29.614      0.000         1.174     1.341
+HML           -0.4259      0.047     -9.061      0.000        -0.518    -0.334
+RMW           -0.4824      0.061     -7.848      0.000        -0.603    -0.362
+CMA           -0.1245      0.081     -1.538      0.125        -0.283     0.034
+==============================================================================
+Omnibus:                       73.206   Durbin-Watson:                   2.161
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              366.236
+Skew:                           0.378   Prob(JB):                     2.97e-80
+Kurtosis:                       6.688   Cond. No.                         5.34
+==============================================================================</code></pre>
+        </section>
+        <section>
+          <h3>Consider Heteroskedasticity?</h3>
+        </section>
+        <section>
+          <p>White's test:</p>
+          <p>$\chi^2_{20}=90.384530$</p>
+          <p>$Prob > \chi^2=0.000000$</p>
+          <p>Breusch-Pagan's test:</p>
+          <p>$\chi^2_1=17.91$</p>
+          <p>$Prob > \chi^2=0.0000$</p>
+          <p>$\Rightarrow$ Heteroscedasticity holds.</p>
+        </section>
+        <section style="font-size:0.6em">
+          <p>FGLS's result:</p>
+          <pre><code>                            WLS Regression Results
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.945
+Model:                            WLS   Adj. R-squared:                  0.944
+Method:                 Least Squares   F-statistic:                     2091.
+Date:                Sun, 24 Apr 2016   Prob (F-statistic):               0.00
+Time:                        22:00:55   Log-Likelihood:                -1314.2
+No. Observations:                 620   AIC:                             2640.
+Df Residuals:                     614   BIC:                             2667.
+Df Model:                           5
+Covariance Type:            nonrobust
+==============================================================================
+                 coef    std err          t      P>|t|      [95.0% Conf. Int.]
+------------------------------------------------------------------------------
+const         -0.3165      0.083     -3.830      0.000        -0.479    -0.154
+Mkt-RF         1.0366      0.019     54.002      0.000         0.999     1.074
+SMB            1.2556      0.029     42.718      0.000         1.198     1.313
+HML           -0.4308      0.040    -10.685      0.000        -0.510    -0.352
+RMW           -0.4508      0.043    -10.534      0.000        -0.535    -0.367
+CMA           -0.1072      0.061     -1.748      0.081        -0.228     0.013
+==============================================================================
+Omnibus:                       77.065   Durbin-Watson:                   2.151
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              268.987
+Skew:                           0.544   Prob(JB):                     3.89e-59
+Kurtosis:                       6.038   Cond. No.                         5.58
+==============================================================================</code></pre>
         </section>
       </section>
       <section>
@@ -107,6 +391,11 @@
       center: true,
 
       transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      math: {
+        mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+        config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+      },
 
       // Optional reveal.js plugins
       dependencies: [
@@ -135,6 +424,7 @@
             hljs.initHighlightingOnLoad();
           }
         },
+        {src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/math/math.js', async: true},
         {src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/zoom-js/zoom.js', async: true},
         {src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.2.0/plugin/notes/notes.js', async: true}
       ]
