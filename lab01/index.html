@@ -267,6 +267,18 @@ Kurtosis:                       5.441   Cond. No.                         5.11
             H_0:r_p=0\wedge c_p=0&\Rightarrow&F_{2,614}=61.24142314 \\
             &&Prob>F=5.60738918135\times10^{-25}
           \end{array}$$</p>
+          <p>Results for $p=25$:</p>
+          <p>$$\begin{array} \\
+            H_0:\alpha_p=0&\Rightarrow&F_{1,614}=0.81466927 \\
+            &&Prob>F=0.367097312649 \\
+            H_0:r_p=0\wedge c_p=0&\Rightarrow&F_{2,614}=7.59007201 \\
+            &&Prob>F=0.00055432228173
+          \end{array}$$</p>
+        </section>
+        <section>
+          <p>Conditions vary for different $p$s, e.g. 1 and 25 as listed above.</p>
+          <p>For $p=1$, $r_p$ and $c_p$ count;</p>
+          <p>For $p=25$, $\alpha_p$ has no effect.</p>
         </section>
         <section>
           <h3>What if we use Robust Standard Error?</h3>
@@ -329,6 +341,7 @@ Skew:                           0.378   Prob(JB):                     2.97e-80
 Kurtosis:                       6.688   Cond. No.                         5.34
 ==============================================================================</code></pre>
         </section>
+        <section>Nonrobust and robust versions are different, because heteroskedasticity exists.</section>
         <section>
           <h3>Consider Heteroskedasticity?</h3>
         </section>
@@ -370,10 +383,16 @@ Skew:                           0.544   Prob(JB):                     3.89e-59
 Kurtosis:                       6.038   Cond. No.                         5.58
 ==============================================================================</code></pre>
         </section>
+        <section>
+          <p>Compared with the original result, all coefficients and standard errors are different.</p>
+        </section>
       </section>
       <section>
         <section id="conclusion">
           <h2>Conclusion</h2>
+          <p>The 3-factor model is much better than the 1-factor one, and already good enough.</p>
+          <p>The 5-factor model does make some progress but there is still limitations, as shown above.</p>
+          <p><small>Reference: Fama, Eugene F., and Kenneth R. French. "Common risk factors in the returns on stocks and bonds." <em>Journal of financial economics</em> 33.1 (1993): 3-56.</small></p>
         </section>
       </section>
     </div>
