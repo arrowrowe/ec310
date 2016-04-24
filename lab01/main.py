@@ -6,13 +6,12 @@ import util.log
 import util.format
 
 # QUESTION: should I implement this myself?
-def fgls(endog, exog):
-  f = sm.OLS(endog, exog).fit()
+def fgls(model):
   return sm.WLS(
-    endog, exog,
+    model.endog, model.exog,
     1 / np.exp(sm.OLS(
-      np.log(f.resid ** 2),
-      exog
+      np.log(model.fit().resid ** 2),
+      model.exog
     ).fit().predict())
   )
 
@@ -65,8 +64,7 @@ class Lab01:
 
   def fiveFactorFGLSRegression(self, index):
     return util.format.Model(fgls(
-      self.portfolios['r' + str(index)] - self.researched.RF,
-      self.fiveFactor
+      self._fiveFactorRegression(index).model
     ), 'FGLS: r%d - RF | Mkt-RF, SMB, HML, RMW, CMA' % index)
 
   def _testFiveParam(self, index):
