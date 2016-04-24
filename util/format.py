@@ -3,6 +3,23 @@ import log
 def joinAllStr(array, delimeter='\n'):
   return delimeter.join(map(str, array))
 
+def produceAll(iterator):
+  def decorator(fn):
+    def decorated(one, index=None):
+      return [
+        fn(one, index=i) for i in iterator
+      ] if index is None else fn(one, index)
+    return decorated
+  return decorator
+
+def cacheDecorator(fn):
+  cache = {}
+  def decorated(one, index):
+    if index not in cache:
+      cache[index] = fn(one, index)
+    return cache[index]
+  return decorated
+
 class Model:
 
   def __init__(self, model, title='Model'):

@@ -5,6 +5,8 @@ import util.source
 import util.log
 import util.format
 
+produceAll = util.format.produceAll(xrange(1, 26))
+
 # QUESTION: should I implement this myself?
 def fgls(model):
   return sm.WLS(
@@ -19,7 +21,6 @@ class Lab01:
   def __init__(self):
     self.researched = util.source.read('F-F_Research_Data_5_Factors_2x3')
     self.portfolios = util.source.read('25_Portfolios_5x5')
-    self.cacheFiveFactorRegression = [None] * 26
     self.simpleFactor = sm.add_constant(self.researched.Mkt_RF)
     self.threeFactor = sm.add_constant(self.researched[['Mkt_RF', 'SMB', 'HML']])
     self.fourFactor = sm.add_constant(self.researched[['Mkt_RF', 'SMB', 'RMW', 'CMA']])
@@ -39,43 +40,32 @@ class Lab01:
       parameter
     ), title % index)
 
-  def _producecAll(self, fn, index):
-    return map(fn, xrange(1, 26)) if index is None else fn(index)
-
-  def _simpleRegression(self, index):
+  @produceAll
+  def simpleRegression(self, index):
     return self._regression('r%d | Mkt-RF', self.simpleFactor, index)
 
-  def simpleRegression(self, index=None):
-    return self._producecAll(self._simpleRegression, index)
-
-  def _threeFactorRegression(self, index):
+  @produceAll
+  def threeFactorRegression(self, index):
     return self._regression('r%d - RF | Mkt-RF, SMB, HML', self.threeFactor, index)
 
-  def threeFactorRegression(self, index=None):
-    return self._producecAll(self._threeFactorRegression, index)
+  @produceAll
+  @util.format.cacheDecorator
+  def fiveFactorRegression(self, index):
+    return self._regression('r%d - RF | Mkt-RF, SMB, HML, RMW, CMA', self.fiveFactor, index)
 
-  def _fiveFactorRegression(self, index):
-    if self.cacheFiveFactorRegression[index] is None:
-      self.cacheFiveFactorRegression[index] = self._regression('r%d - RF | Mkt-RF, SMB, HML, RMW, CMA', self.fiveFactor, index)
-    return self.cacheFiveFactorRegression[index]
-
-  def fiveFactorRegression(self, index=None):
-    return self._producecAll(self._fiveFactorRegression, index)
-
+  @produceAll
   def fiveFactorFGLSRegression(self, index):
     return util.format.Model(fgls(
-      self._fiveFactorRegression(index).model
+      self.fiveFactorRegression(index).model
     ), 'FGLS: r%d - RF | Mkt-RF, SMB, HML, RMW, CMA' % index)
 
-  def _testFiveParam(self, index):
-    fit = self._fiveFactorRegression(index).fit()
+  @produceAll
+  def testFiveParam(self, index):
+    fit = self.fiveFactorRegression(index).fit()
     return (
       fit.f_test('const = 0'),
       fit.f_test('(RMW = 0), (CMA = 0)')
     )
-
-  def testFiveParam(self, index=None):
-    return self._producecAll(self._testFiveParam, index)
 
   def hmlRegression(self):
     return util.format.Model(sm.OLS(self.researched.HML, self.fourFactor), 'HML | Mkt-RF, SMB, RMW, CMA')
